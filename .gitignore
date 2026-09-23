@@ -1,0 +1,24 @@
+# OS junk 
+Thumbs.db 
+desktop.ini 
+.DS_Store
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Secrets
+.env
+*.env.local
+
+# Logs
+*.log
+
+# Mosquitto runtime data for mounting log folders
+infra/mosquitto/data/
+infra/mosquitto/log/
+
+# Frontend
+client/node_modules/
+client/dist/

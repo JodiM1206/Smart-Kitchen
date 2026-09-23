@@ -1,0 +1,17 @@
+server:
+    port: 8081
+spring:
+    application:
+        name: smart-kitchen
+    datasource:
+        url: jdbc:postgresql://localhost:5432/smartkitchen
+        username: kitchen
+        password: kitchen 
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+mqtt:
+    broker-url: tcp://localhost:1883
+    client-id: smart-kitchen-server
+    topic: kitchen/#
