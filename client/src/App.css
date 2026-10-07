@@ -27,3 +27,61 @@ body {
 
 }
 
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-top h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.online {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status.offline {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.readings {
+  display: flex;
+  gap: 32px;
+}
+
+.reading-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.reading-unit {
+  margin-left: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.reading-label {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.last-updated {
+  margin: 16px 0 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
