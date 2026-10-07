@@ -1,4 +1,5 @@
-function DeviceCard({ title, status, lastUpdated, readings }) {
+import SparkLine from "./SparkLine"
+function DeviceCard({ title, status, lastUpdated, readings, history, threshold }) {
   return (
     <div className="device-card">
       <div className="card-top">
@@ -17,6 +18,15 @@ function DeviceCard({ title, status, lastUpdated, readings }) {
           </div>
         ))}
       </div>
+
+      {history && (
+        <div className="trend">
+          <SparkLine data={history} threshold={threshold} />
+          <div className="trend-label">
+            Temperature, last 10 readings. Green line : {threshold}°C limit
+            </div>
+          </div>
+      )}
 
       <p className="last-updated">Last updated {lastUpdated}</p>
     </div>

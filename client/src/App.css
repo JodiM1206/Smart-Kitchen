@@ -1,7 +1,9 @@
 /* Header */
 .header{
   position: Sticky;
-  top: 12px;
+  top: 0;
+  margin: 0;
+  border-radius: 0;
   z-index: 10;
   padding: 10px;
   background-color: rgba(0, 0, 0);
@@ -27,6 +29,23 @@ body {
 
 }
 
+/* Devices */
+
+.dashboard {
+  display:flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 32px 16px 20px;
+}
+
+.device-card {
+  flex: 1 1 260px;
+  padding :20px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  color: #111827;
+}
 .card-top {
   display: flex;
   justify-content: space-between;
@@ -85,3 +104,20 @@ body {
   font-size: 0.8rem;
   color: #6b7280;
 }
+
+/* Graph */
+.trend {
+  margin-top: 16px;
+}
+
+.sparkline {
+  display: block;
+  width: 100%;
+  height: 60px;
+  color: black;
+}
+ .trend-label {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #6b7280;
+ }
