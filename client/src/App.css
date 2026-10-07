@@ -1,0 +1,9 @@
+/* Header */
+.header{
+  position: Sticky; top:0 ;
+  position: fixed;
+  z-index: 10;
+  background-color: #ff0000;
+}
+
+
