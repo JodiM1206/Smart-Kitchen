@@ -12,10 +12,10 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
   
-  Serial.println("\n[INIT] Initializing HX711 Load Cell via PlatformIO...");
+  Serial.println("\n[INIT] Initializing HX711");
   scale.begin(DT_PIN, SCK_PIN);
 
-  // Set initial scale factor (update this after calibration)
+  // Set initial scale factor (update this after calibration), formula is oldFactor x (current reading of an item/ known item weight)
   scale.set_scale(46.51f); 
 
   Serial.println("[INFO] Taring scale... Please keep the platform completely empty.");
@@ -48,16 +48,16 @@ void loop() {
     if (scale.is_ready()) {
       float weightGrams = scale.get_units(5);
       float weightLbs = weightGrams / 453.592f;
-      // Apply a small deadzone filter to lock tiny noise to 0.00 g
+      
       if (abs(weightLbs) < 0.10) {
         weightLbs = 0.0;
       }
       Serial.print("Current Weight: ");
       Serial.print(weightLbs, 2);
-      Serial.println(" g");
+      Serial.println(" lbs");
     } else {
       Serial.println("[WARNING] HX711 sensor not responding.");
     }
   }
-  delay(500); // Prevents the ESP32 watchdog timer from triggering a reset
+  delay(500);
 }
