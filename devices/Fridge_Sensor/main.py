@@ -2,7 +2,7 @@ import time
 from machine import I2C, Pin
 import bme280_float
 
-# Define I2C port and pins (I2C0 using GP0 for SDA and GP1 for SCL)
+# Define I2C port and pins (I2C0 using GP4 for SDA and GP5 for SCL)
 I2C_ID = 0
 PIN_SDA = 4
 PIN_SCL = 5
